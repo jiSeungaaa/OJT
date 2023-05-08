@@ -9,8 +9,8 @@ import com.neo.convergence.mngr.sample.web.SampleController;
 
 @Controller
 public class userLoginController {
-	
-	@SuppressWarnings("unused") 
+
+	@SuppressWarnings("unused")
 	private static final Logger LOGGER = LoggerFactory.getLogger(userLoginController.class);
 	// 사용하지 않는 코드 또는 불필요한 코드가 있을 경우 경고 억제
 
@@ -19,4 +19,21 @@ public class userLoginController {
 		return "/mngr/user/userLoginForm";
 	}
 
+	// 사용자신청 폼 이동
+	@RequestMapping("/userAplyForm.do")
+	public String userAplyForm() {
+		return "/mngr/user/userAplyForm";
+	}
+
+	//사용자 정보입력 페이지 이동
+	@RequestMapping("/userSignForm.do")
+	public String userSignForm() {
+		return "/mngr/user/userSignForm";
+	}
+	
+	//사용자 신청완료 페이지 이동
+	@RequestMapping("/userCompleteForm.do")
+	public String userCompleteForm() {
+		return "/mngr/user/userCompleteForm";
+	}
 }
